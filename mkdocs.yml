@@ -1,0 +1,43 @@
+site_name: Support @ Hobby Stuff
+site_url: https://support.hobbystuff.co.uk
+theme:
+  name: material
+  features:
+    - navigation.footer
+  palette:
+  # Dark Mode
+  - scheme: slate
+    toggle:
+      icon: material/weather-sunny
+      name: Dark mode
+    primary: green
+    accent: deep purple
+
+  # Light Mode
+  - scheme: default
+    toggle:
+      icon: material/weather-night
+      name: Light mode
+    primary: blue
+    accent: deep orange
+
+markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+
+extra:
+  social:
+    - icon: simple/youtube
+      link: https://www.youtube.com/@HobbyStuffLtd
+    - icon: simple/ebay
+      link: https://www.ebay.co.uk/str/hobbystuffltd
+
+copyright: Copyright &copy; Hobby Stuff Ltd
