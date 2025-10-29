@@ -1,18 +1,30 @@
-# Welcome to MkDocs
+# Welcome
+Need extra info on your purchase or inspiration for projects?
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Hobby Stuff have compiled a series of tips and notes which may be able to help you get over these bumps in the road.
 
-## Commands
+If you have any suggestions to tutorials or links which have helped you out, [please do send it on to us](https://hobbystuff.co.uk/pages/contact).
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+### Find help for your...
 
-## Project layout
+<div class="grid cards" markdown>
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+!!! abstract "Cheap Yellow Display (CYD)"
 
+    [![CYD](assets/img/cyd.jpg)](Single-Board-Computers/CYD.md)
+
+    [:octicons-arrow-right-24: Get started](Single-Board-Computers/CYD.md)
+
+!!! abstract "Pi4 / Pi5 case"
+
+    [![CYD](assets/img/case_pi5.jpg)](Cases/pi.md)
+
+    [:octicons-arrow-right-24: Get started](Cases/pi.md)
+
+!!! abstract "Nano"
+
+    [![CYD](assets/img/nano.jpg)](Single-Board-Computers/nano.md)
+
+    [:octicons-arrow-right-24: Get started](Single-Board-Computers/nano.md)
+
+</div>

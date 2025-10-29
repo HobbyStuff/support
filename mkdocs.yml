@@ -4,13 +4,14 @@ theme:
   name: material
   features:
     - navigation.footer
+    
   palette:
   # Dark Mode
   - scheme: slate
     toggle:
       icon: material/weather-sunny
       name: Dark mode
-    primary: green
+    primary: indigo
     accent: deep purple
 
   # Light Mode
@@ -23,6 +24,13 @@ theme:
 
 markdown_extensions:
   - attr_list
+  - md_in_html
+  - pymdownx.blocks.caption
+  - admonition
+  - pymdownx.details
+  - tables
+  - def_list
+  - pymdownx.superfences
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
@@ -32,12 +40,22 @@ markdown_extensions:
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
 
-
 extra:
+  homepage: https://hobbystuff.co.uk
   social:
+    - icon: material/web
+      link: https://hobbystuff.co.uk
     - icon: simple/youtube
       link: https://www.youtube.com/@HobbyStuffLtd
     - icon: simple/ebay
       link: https://www.ebay.co.uk/str/hobbystuffltd
+  announcement:
+    type: info
+    text: 'Visit our <a href="https://yourmainomMain Website</a>'
+  nav:
+    - Main Website: https://hobbystuff.co.uk
 
-copyright: Copyright &copy; Hobby Stuff Ltd
+copyright: "Copyright &copy; Hobby Stuff Ltd"
+
+extra_css:
+  - css/extra.css
