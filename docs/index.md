@@ -21,6 +21,12 @@ If you have any suggestions to tutorials or links which have helped you out, [pl
 
     [:octicons-arrow-right-24: Get started](Cases/pi.md)
 
+!!! abstract "ESP32-CAM"
+
+    [![CYD](assets/img/esp32cam.jpg)](Single-Board-Computers/esp32cam.md)
+
+    [:octicons-arrow-right-24: Get started](Single-Board-Computers/esp32cam.md)
+
 !!! abstract "Nano"
 
     [![CYD](assets/img/nano.jpg)](Single-Board-Computers/nano.md)
