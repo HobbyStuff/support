@@ -1,0 +1,1067 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://support.hobbystuff.co.uk/Single-Board-Computers/Help-with-your-CYD/2_CYD-TestCode/">
+      
+      
+        <link rel="prev" href="../1_CYD/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>CYD - Tutorial - Support @ Hobby Stuff</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="deep-purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cyd-tutorial" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://hobbystuff.co.uk" title="Support @ Hobby Stuff" class="md-header__button md-logo" aria-label="Support @ Hobby Stuff" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Support @ Hobby Stuff
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              CYD - Tutorial
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="deep-orange"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://hobbystuff.co.uk" title="Support @ Hobby Stuff" class="md-nav__button md-logo" aria-label="Support @ Hobby Stuff" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Support @ Hobby Stuff
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cases
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Cases
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Cases/pi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Raspberry Pi 4 / 5 case
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Single Board Computers
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Single Board Computers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../esp32cam/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Help with your ESP32-CAM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nano/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Help with your Nano
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Help with your CYD
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Help with your CYD
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1_CYD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CYD - Welcome
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CYD - Tutorial
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CYD - Tutorial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-install-vscode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Install vscode
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-add-the-platformio-extension" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Add the PlatformIO extension
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-create-the-project-in-platformio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Create the project in PlatformIO
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-add-tft_espi-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Add TFT_eSPI library
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-update-platformioini" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Update platformio.ini
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-add-the-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Add the code
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#success" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Success!
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-install-vscode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Install vscode
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-add-the-platformio-extension" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Add the PlatformIO extension
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-create-the-project-in-platformio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Create the project in PlatformIO
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-add-tft_espi-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Add TFT_eSPI library
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-update-platformioini" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Update platformio.ini
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-add-the-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Add the code
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#success" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Success!
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="cyd-tutorial">CYD - Tutorial</h1>
+<p>This very brief tutorial aims to get you up and running with your CYD in the vscode and PlatformIO environment.  There are many other ways to program your CYD, and as much as Hobby Stuff would like to, cannot cover all possible routes into the software development world!</p>
+<h2 id="1-install-vscode">1. Install vscode</h2>
+<p>Visual Studio Code (also known as vscode) is available freely at <a href="https://code.visualstudio.com/download">code.visualstudio.com/download</a>.</p>
+<h2 id="2-add-the-platformio-extension">2. Add the PlatformIO extension</h2>
+<p>Within vscode, from your left menu bar, select Extensions, search for PlatformIO IDE, then click Install.</p>
+<div class="admonition info">
+<p><img alt="PlatformIO IDE application inside vscode" src="../../../assets/img/cyd/platformio.png" /></p>
+</div>
+<h2 id="3-create-the-project-in-platformio">3. Create the project in PlatformIO</h2>
+<p>3.1. Within vscode, go to PlatformIO and select Create New Project.</p>
+<p>3.2. Give your project a name, select the <strong>Espressif ESP32 Dev Module</strong> and <strong>Arduino</strong> Framework.</p>
+<div class="admonition info">
+<p><img alt="PlatformIO Project Wizard" src="../../../assets/img/cyd/platformio-projectwizard.png" /></p>
+</div>
+<h2 id="4-add-tft_espi-library">4. Add TFT_eSPI library</h2>
+<p>4.1. Within vscode, select Quick Access &gt; PIO Home &gt; Libraries.</p>
+<p>4.2. Search for the <strong>TFT_eSPI</strong> library by <strong>Bodmer</strong>.  Select <strong>Add to Project</strong>.</p>
+<div class="admonition info">
+<p><img alt="PlatformIO Project Wizard" src="../../../assets/img/cyd/platformio-tft.png" /></p>
+</div>
+<h2 id="5-update-platformioini">5. Update platformio.ini</h2>
+<p>Open your platform.ini file and update it with the following contents:</p>
+<div class="highlight"><span class="filename">platformio.ini</span><pre><span></span><code><span class="p">[</span><span class="err">e</span><span class="kc">n</span><span class="err">v</span><span class="p">:</span><span class="err">esp</span><span class="mi">32</span><span class="err">dev</span><span class="p">]</span>
+<span class="err">pla</span><span class="kc">tf</span><span class="err">orm</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">espressi</span><span class="kc">f</span><span class="mi">32</span>
+<span class="err">board</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">esp</span><span class="mi">32</span><span class="err">dev</span>
+<span class="kc">fra</span><span class="err">mework</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">ardui</span><span class="kc">n</span><span class="err">o</span>
+<span class="err">mo</span><span class="kc">n</span><span class="err">i</span><span class="kc">t</span><span class="err">or_speed</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="mi">115200</span>
+
+<span class="err">lib_deps</span><span class="w"> </span><span class="err">=</span>
+<span class="w">    </span><span class="err">bodmer/TFT_eSPI</span>
+
+<span class="err">build_</span><span class="kc">fla</span><span class="err">gs</span><span class="w"> </span><span class="err">=</span>
+<span class="w">    </span><span class="mi">-</span><span class="err">D</span><span class="w"> </span><span class="err">USER_SETUP_LOADED=</span><span class="mi">1</span>
+
+<span class="w">    </span><span class="err">;</span><span class="w"> </span><span class="err">De</span><span class="kc">f</span><span class="err">i</span><span class="kc">ne</span><span class="w"> </span><span class="kc">t</span><span class="err">he</span><span class="w"> </span><span class="err">driver</span>
+<span class="w">    </span><span class="mi">-</span><span class="err">D</span><span class="w"> </span><span class="err">ST</span><span class="mi">7789</span><span class="err">_DRIVER=</span><span class="mi">1</span>
+
+<span class="w">    </span><span class="err">;</span><span class="w"> </span><span class="err">De</span><span class="kc">f</span><span class="err">i</span><span class="kc">ne</span><span class="w"> </span><span class="kc">t</span><span class="err">he</span><span class="w"> </span><span class="err">pi</span><span class="kc">ns</span><span class="w"> </span><span class="kc">f</span><span class="err">or</span><span class="w"> </span><span class="err">ESP</span><span class="mi">32-2432</span><span class="err">S</span><span class="mi">028</span><span class="w"> </span><span class="err">(CYD)</span>
+<span class="w">    </span><span class="mi">-</span><span class="err">D</span><span class="w"> </span><span class="err">TFT_MISO=</span><span class="mi">12</span>
+<span class="w">    </span><span class="mi">-</span><span class="err">D</span><span class="w"> </span><span class="err">TFT_MOSI=</span><span class="mi">13</span>
+<span class="w">    </span><span class="mi">-</span><span class="err">D</span><span class="w"> </span><span class="err">TFT_SCLK=</span><span class="mi">14</span>
+<span class="w">    </span><span class="mi">-</span><span class="err">D</span><span class="w"> </span><span class="err">TFT_CS=</span><span class="mi">15</span>
+<span class="w">    </span><span class="mi">-</span><span class="err">D</span><span class="w"> </span><span class="err">TFT_DC=</span><span class="mi">2</span>
+<span class="w">    </span><span class="mi">-</span><span class="err">D</span><span class="w"> </span><span class="err">TFT_RST=</span><span class="mi">-1</span>
+<span class="w">    </span><span class="mi">-</span><span class="err">D</span><span class="w"> </span><span class="err">TFT_BL=</span><span class="mi">21</span>
+
+<span class="w">    </span><span class="err">;</span><span class="w"> </span><span class="err">Fix</span><span class="w"> </span><span class="kc">t</span><span class="err">he</span><span class="w"> </span><span class="err">Red/Blue</span><span class="w"> </span><span class="err">color</span><span class="w"> </span><span class="err">swap</span>
+<span class="w">    </span><span class="mi">-</span><span class="err">D</span><span class="w"> </span><span class="err">TFT_RGB_ORDER=TFT_BGR</span>
+
+<span class="w">    </span><span class="err">;</span><span class="w"> </span><span class="err">I</span><span class="kc">n</span><span class="err">ver</span><span class="kc">t</span><span class="w"> </span><span class="err">colors</span><span class="w"> </span><span class="err">i</span><span class="kc">f</span><span class="w"> </span><span class="kc">t</span><span class="err">he</span><span class="w"> </span><span class="err">scree</span><span class="kc">n</span><span class="w"> </span><span class="err">looks</span><span class="w"> </span><span class="err">like</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">pho</span><span class="kc">t</span><span class="err">o</span><span class="w"> </span><span class="kc">ne</span><span class="err">ga</span><span class="kc">t</span><span class="err">ive</span>
+<span class="w">    </span><span class="err">;</span><span class="mi">-</span><span class="err">D</span><span class="w"> </span><span class="err">TFT_INVERSION_ON</span><span class="w"> </span>
+
+<span class="w">    </span><span class="err">;</span><span class="w"> </span><span class="err">Load</span><span class="w"> </span><span class="err">Fo</span><span class="kc">nts</span>
+<span class="w">    </span><span class="mi">-</span><span class="err">D</span><span class="w"> </span><span class="err">LOAD_GLCD=</span><span class="mi">1</span>
+<span class="w">    </span><span class="mi">-</span><span class="err">D</span><span class="w"> </span><span class="err">LOAD_FONT</span><span class="mi">2</span><span class="err">=</span><span class="mi">1</span>
+<span class="w">    </span><span class="mi">-</span><span class="err">D</span><span class="w"> </span><span class="err">LOAD_FONT</span><span class="mi">4</span><span class="err">=</span><span class="mi">1</span>
+
+<span class="w">    </span><span class="err">;</span><span class="w"> </span><span class="err">SPI</span><span class="w"> </span><span class="err">Speed</span><span class="w"> </span><span class="err">(</span><span class="mi">55</span><span class="err">MHz</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">usually</span><span class="w"> </span><span class="err">s</span><span class="kc">ta</span><span class="err">ble</span><span class="w"> </span><span class="kc">f</span><span class="err">or</span><span class="w"> </span><span class="err">wri</span><span class="kc">t</span><span class="err">i</span><span class="kc">n</span><span class="err">g)</span>
+<span class="w">    </span><span class="mi">-</span><span class="err">D</span><span class="w"> </span><span class="err">SPI_FREQUENCY=</span><span class="mi">55000000</span>
+<span class="w">    </span><span class="mi">-</span><span class="err">D</span><span class="w"> </span><span class="err">SPI_READ_FREQUENCY=</span><span class="mi">20000000</span>
+<span class="w">    </span><span class="mi">-</span><span class="err">D</span><span class="w"> </span><span class="err">SPI_TOUCH_FREQUENCY=</span><span class="mi">2500000</span>
+</code></pre></div>
+<h2 id="6-add-the-code">6. Add the code</h2>
+<p>Finally, we get to add some code.  Try this out as your <strong>main.cpp</strong> file:</p>
+<div class="highlight"><span class="filename">main.cpp</span><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Arduino.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;TFT_eSPI.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;SPI.h&gt;</span>
+
+<span class="c1">// Initialize the library</span>
+<span class="n">TFT_eSPI</span><span class="w"> </span><span class="n">tft</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TFT_eSPI</span><span class="p">();</span><span class="w"> </span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// 1. Initialize Display</span>
+<span class="w">  </span><span class="n">tft</span><span class="p">.</span><span class="n">init</span><span class="p">();</span>
+<span class="w">  </span><span class="n">tft</span><span class="p">.</span><span class="n">invertDisplay</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// 2. Set Rotation (1 = Landscape, 3 = Inverted Landscape)</span>
+<span class="w">    </span><span class="n">tft</span><span class="p">.</span><span class="n">setRotation</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// 3. Turn on Backlight </span>
+<span class="w">  </span><span class="c1">// (We still do this manually to be safe, even though we defined it in build flags)</span>
+<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="mi">21</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+<span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="mi">21</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// 4. Clear Screen</span>
+<span class="w">  </span><span class="n">tft</span><span class="p">.</span><span class="n">fillScreen</span><span class="p">(</span><span class="n">TFT_BLACK</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// 5. Draw Text</span>
+<span class="w">  </span><span class="c1">// TFT_eSPI uses distinct font numbers (2 and 4 are good basic ones)</span>
+<span class="w">  </span><span class="n">tft</span><span class="p">.</span><span class="n">setTextColor</span><span class="p">(</span><span class="n">TFT_WHITE</span><span class="p">,</span><span class="w"> </span><span class="n">TFT_BLACK</span><span class="p">);</span><span class="w"> </span><span class="c1">// White text, Black background</span>
+<span class="w">  </span><span class="n">tft</span><span class="p">.</span><span class="n">drawCentreString</span><span class="p">(</span><span class="s">&quot;TFT_eSPI Running!&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">160</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span><span class="w"> </span><span class="c1">// Centered at x=160</span>
+
+<span class="w">  </span><span class="n">tft</span><span class="p">.</span><span class="n">setTextColor</span><span class="p">(</span><span class="n">TFT_GREEN</span><span class="p">,</span><span class="w"> </span><span class="n">TFT_BLACK</span><span class="p">);</span>
+<span class="w">  </span><span class="n">tft</span><span class="p">.</span><span class="n">drawCentreString</span><span class="p">(</span><span class="s">&quot;High Speed SPI&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">160</span><span class="p">,</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// 6. Draw Shapes to verify Color and Position</span>
+<span class="w">  </span><span class="c1">// If platformio.ini is correct, Red should be Red, Blue should be Blue</span>
+<span class="w">  </span><span class="n">tft</span><span class="p">.</span><span class="n">fillRect</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span><span class="w"> </span><span class="n">TFT_RED</span><span class="p">);</span>
+<span class="w">  </span><span class="n">tft</span><span class="p">.</span><span class="n">fillRect</span><span class="p">(</span><span class="mi">120</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span><span class="w"> </span><span class="n">TFT_GREEN</span><span class="p">);</span>
+<span class="w">  </span><span class="n">tft</span><span class="p">.</span><span class="n">fillRect</span><span class="p">(</span><span class="mi">220</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span><span class="w"> </span><span class="n">TFT_BLUE</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// Draw outlines</span>
+<span class="w">  </span><span class="n">tft</span><span class="p">.</span><span class="n">drawRect</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span><span class="w"> </span><span class="n">TFT_WHITE</span><span class="p">);</span>
+<span class="w">  </span><span class="n">tft</span><span class="p">.</span><span class="n">drawRect</span><span class="p">(</span><span class="mi">120</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span><span class="w"> </span><span class="n">TFT_WHITE</span><span class="p">);</span>
+<span class="w">  </span><span class="n">tft</span><span class="p">.</span><span class="n">drawRect</span><span class="p">(</span><span class="mi">220</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span><span class="w"> </span><span class="n">TFT_WHITE</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Simple animation to show speed</span>
+<span class="w">  </span><span class="c1">// Bouncing Ball</span>
+<span class="w">  </span><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">160</span><span class="p">;</span>
+<span class="w">  </span><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">200</span><span class="p">;</span>
+<span class="w">  </span><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">dx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+
+<span class="w">  </span><span class="c1">// Erase previous circle (draw black over it)</span>
+<span class="w">  </span><span class="n">tft</span><span class="p">.</span><span class="n">fillCircle</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">TFT_BLACK</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// Update position</span>
+<span class="w">  </span><span class="n">x</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">dx</span><span class="p">;</span>
+
+<span class="w">  </span><span class="c1">// Bounce off edges (Landscape width is 320)</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">310</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="n">dx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">dx</span><span class="p">;</span>
+
+<span class="w">  </span><span class="c1">// Draw new circle</span>
+<span class="w">  </span><span class="n">tft</span><span class="p">.</span><span class="n">fillCircle</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">TFT_YELLOW</span><span class="p">);</span>
+
+<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span><span class="w"> </span><span class="c1">// Very short delay for smooth animation</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="success">Success!</h2>
+<p>And there we have it, your CYD should be up and running!</p>
+<div class="admonition info">
+<p><img alt="PlatformIO Project Wizard" src="../../../assets/img/cyd/cyd-output.jpg" /></p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../1_CYD/" class="md-footer__link md-footer__link--prev" aria-label="Previous: CYD - Welcome">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                CYD - Welcome
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; Hobby Stuff Ltd
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://hobbystuff.co.uk" target="_blank" rel="noopener" title="hobbystuff.co.uk" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.36 14c.08-.66.14-1.32.14-2s-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2m-5.15 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8.03 8.03 0 0 1-4.33 3.56M14.34 14H9.66c-.1-.66-.16-1.32-.16-2s.06-1.35.16-2h4.68c.09.65.16 1.32.16 2s-.07 1.34-.16 2M12 19.96c-.83-1.2-1.5-2.53-1.91-3.96h3.82c-.41 1.43-1.08 2.76-1.91 3.96M8 8H5.08A7.92 7.92 0 0 1 9.4 4.44C8.8 5.55 8.35 6.75 8 8m-2.92 8H8c.35 1.25.8 2.45 1.4 3.56A8 8 0 0 1 5.08 16m-.82-2C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2s.06 1.34.14 2M12 4.03c.83 1.2 1.5 2.54 1.91 3.97h-3.82c.41-1.43 1.08-2.77 1.91-3.97M18.92 8h-2.95a15.7 15.7 0 0 0-1.38-3.56c1.84.63 3.37 1.9 4.33 3.56M12 2C6.47 2 2 6.5 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.youtube.com/@HobbyStuffLtd" target="_blank" rel="noopener" title="www.youtube.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.498 6.186a3.02 3.02 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.02 3.02 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.02 3.02 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.02 3.02 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814M9.545 15.568V8.432L15.818 12z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.ebay.co.uk/str/hobbystuffltd" target="_blank" rel="noopener" title="www.ebay.co.uk" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.056 12.132v-4.92h1.2v3.026c.59-.703 1.402-.906 2.202-.906 1.34 0 2.828.904 2.828 2.855 0 .233-.015.457-.06.668.24-.953 1.274-1.305 2.896-1.344.51-.018 1.095-.018 1.56-.018v-.135c0-.885-.556-1.244-1.53-1.244-.72 0-1.245.3-1.305.81h-1.275c.136-1.29 1.5-1.62 2.686-1.62 1.064 0 1.995.27 2.415 1.02l-.436-.84h1.41l2.055 4.125 2.055-4.126H24l-3.72 7.305h-1.346l1.07-2.04-2.33-4.38c.13.255.2.555.2.93v2.46c0 .346.01.69.04 1.005H16.8a7 7 0 0 1-.046-.765c-.603.734-1.32.96-2.32.96-1.48 0-2.272-.78-2.272-1.695q.002-.224.037-.405c-.3 1.246-1.36 2.086-2.767 2.086-.87 0-1.694-.315-2.2-.93 0 .24-.015.494-.04.734h-1.18c.02-.39.04-.855.04-1.245v-1.05h-4.83c.065 1.095.818 1.74 1.853 1.74.718 0 1.355-.3 1.568-.93h1.24c-.24 1.29-1.61 1.725-2.79 1.725C.95 15.009 0 13.822 0 12.232c0-1.754.982-2.91 3.116-2.91 1.688 0 2.93.886 2.94 2.806v.005zm9.137.183c-1.095.034-1.77.233-1.77.95 0 .465.36.97 1.305.97 1.26 0 1.935-.69 1.935-1.814v-.13c-.45 0-.99.006-1.484.022h.012zm-6.06 1.875c1.11 0 1.876-.806 1.876-2.02s-.768-2.02-1.893-2.02c-1.11 0-1.89.806-1.89 2.02s.765 2.02 1.875 2.02h.03zm-4.35-2.514c-.044-1.125-.854-1.546-1.725-1.546-.944 0-1.694.474-1.815 1.546z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.footer", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
