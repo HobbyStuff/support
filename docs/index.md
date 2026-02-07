@@ -11,7 +11,7 @@ If you have any suggestions to tutorials or links which have helped you out, [pl
 
 !!! abstract "Cheap Yellow Display (CYD)"
 
-    [![CYD](assets/img/cyd.jpg)](Single-Board-Computers/CYD.md)
+    [![CYD](assets/img/cyd.jpg)](Single-Board-Computers/Help-with-your-CYD/1_CYD.md)
 
     [:octicons-arrow-right-24: Get started](Single-Board-Computers/CYD.md)
 

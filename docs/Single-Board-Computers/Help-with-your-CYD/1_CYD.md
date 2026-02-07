@@ -1,11 +1,14 @@
-# Cheap Yellow Display (CYD)
+# CYD - Welcome
 Congratulations on being the proud owner of a CYD!
 
 Below are some links that Hobby Stuff have found to help or inspire when trying to get to grips with the CYD.
 
 If you have any suggestions to tutorials or links which have helped you out, [please do send it on to us](https://hobbystuff.co.uk/pages/contact).
 
+## Hobby Stuff CYD Tutorial
+We have created a very brief tutorial using vscode and PlatformIO to check your environment and the CYD is functioning correctly...
 
+* [Click here for the tutorial](2_CYD-TestCode.md).
 
 !!! tip "<span>Tip</span><span class='admon-title-right'> Hobby Stuff customer feedback</span>"
 
@@ -22,7 +25,6 @@ If you have any suggestions to tutorials or links which have helped you out, [pl
     + __[Image Display](https://randomnerdtutorials.com/esp32-cyd-lvgl-display-image/)__ - Guide detailing how to display an image on your CYD.
 
     + __[ESP32 with Arduino IDE](https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/)__ - A great tutorial of how to get started with ESP32 module programming within the Arduino IDE.
-
 
 !!! abstract "<span>GitHub - witnessmenow</span><span class='admon-title-right'>:simple-github:</span>"
 
