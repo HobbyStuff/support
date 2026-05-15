@@ -1,6 +1,6 @@
 # CYD - Tutorial
 
-This very brief tutorial aims to get you up and running with your CYD in the vscode and PlatformIO environment.  There are many other ways to program your CYD, and as much as Hobby Stuff would like to, cannot cover all possible routes into the software development world!
+This very brief tutorial aims to get you up and running with your CYD in the vscode and PlatformIO environment.  There are many other ways to program your CYD, and as much as we would like to, we cannot cover all possible routes into the software development world!
 
 ## 1. Install vscode
 Visual Studio Code (also known as vscode) is available freely at [code.visualstudio.com/download](https://code.visualstudio.com/download).
@@ -146,7 +146,7 @@ void loop() {
   delay(10); // Very short delay for smooth animation
 }
 ```
-## Success!
+## 7. Success!
 
 And there we have it, your CYD should be up and running!
 

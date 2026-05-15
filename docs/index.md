@@ -13,7 +13,13 @@ If you have any suggestions to tutorials or links which have helped you out, [pl
 
     [![CYD](assets/img/cyd.jpg)](Single-Board-Computers/Help-with-your-CYD/1_CYD.md)
 
-    [:octicons-arrow-right-24: Get started](Single-Board-Computers/CYD.md)
+    [:octicons-arrow-right-24: Get started](Single-Board-Computers/Help-with-your-CYD/1_CYD.md)
+
+!!! abstract "XL4015 with LED display"
+
+    [![CYD](assets/img/XL4015-LED.jpg)](Modules/XL4015-LED.md)
+
+    [:octicons-arrow-right-24: Get started](Modules/XL4015-LED.md)
 
 !!! abstract "Pi4 / Pi5 case"
 
