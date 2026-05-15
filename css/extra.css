@@ -1,0 +1,29 @@
+
+/* Remove the label entirely, then add a matching offset above the nav list */
+@media screen and (min-width: 76.25em) {
+  label[for="__drawer"] { display: none; }
+
+  /* Nudge the list down to align with the content header */
+  .md-sidebar--primary .md-nav__list {
+    margin-top: 0.0rem;      /* tweak until the top items line up */
+  }
+}
+
+
+
+/* Make admonition titles a left|right split */
+.md-typeset .admonition > .admonition-title,
+.md-typeset details > summary {
+  display: flex;
+  align-items: center;
+  gap: .5rem;                 /* spacing between the two halves */
+}
+
+/* Push the right half to the far edge */
+.md-typeset .admonition > .admonition-title .admon-title-right,
+.md-typeset details > summary .admon-title-right {
+  margin-left: auto;          /* the magic: right-align chunk */
+  text-align: right;
+  white-space: nowrap;        /* optional: prevent awkward wraps */
+  font-weight: normal; /* overrides the inherited bold */
+}
